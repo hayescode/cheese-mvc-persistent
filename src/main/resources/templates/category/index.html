@@ -7,7 +7,7 @@
     <ul th:replace="fragments :: navigation"></ul>
 
     <ul th:each="category : ${categories}">
-        <li th:text="${category.name}"></li>
+        <a th:href="'cheese/category?id=' + ${category.id}"><li th:text="${category.name}"></li></a>
     </ul>
 
     <a href="/category/add">Add Category</a>
